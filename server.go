@@ -104,6 +104,8 @@ func createBasketsDatabase(dbtype string, file string, conn string) BasketsDatab
 			return NewSQLDatabase(conn)
 		}
 		return NewSQLDatabase(file)
+	case DbTypeMongo:
+		return NewMongoDatabase(conn)
 	default:
 		log.Printf("[error] unknown database type: %s", dbtype)
 		return nil

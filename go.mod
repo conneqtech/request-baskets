@@ -8,5 +8,6 @@ require (
 	github.com/lib/pq v1.10.9
 	github.com/stretchr/testify v1.8.1
 	go.etcd.io/bbolt v1.3.7
+	go.mongodb.org/mongo-driver v1.13.1
 	golang.org/x/sys v0.7.0 // indirect
 )

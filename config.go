@@ -61,8 +61,8 @@ func CreateConfig() *ServerConfig {
 	var pageSize = flag.Int("page", defaultPageSize, "Default page size")
 	var masterToken = flag.String("token", "", "Master token, random token is generated if not provided")
 	var dbType = flag.String("db", defaultDatabaseType, fmt.Sprintf(
-		"Baskets storage type: \"%s\" - in-memory, \"%s\" - Bolt DB, \"%s\" - SQL database",
-		DbTypeMemory, DbTypeBolt, DbTypeSQL))
+		"Baskets storage type: \"%s\" - in-memory, \"%s\" - Bolt DB, \"%s\" - SQL database, \"%s\" - MongoDB",
+		DbTypeMemory, DbTypeBolt, DbTypeSQL, DbTypeMongo))
 	var dbFile = flag.String("file", "./baskets.db", "Database location, only applicable for file or SQL databases")
 	var dbConnection = flag.String("conn", "", "Database connection string for SQL databases, if undefined \"file\" argument is considered")
 	var prefix = flag.String("prefix", "", "Service URL path prefix")
