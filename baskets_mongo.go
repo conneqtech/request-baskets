@@ -11,7 +11,6 @@ import (
 	"net/http"
 	"net/url"
 	"regexp"
-	"time"
 )
 
 const DbTypeMongo = "mongo"
@@ -130,7 +129,7 @@ func (m *mongoBasket) Add(req *http.Request) *RequestData {
 	reqData := ToRequestData(req)
 	mr := mongoRequestData{
 		Basket:        m.Name,
-		ID:            primitive.NewObjectIDFromTimestamp(time.Unix(reqData.Date, 0)),
+		ID:            primitive.NewObjectID(),
 		Header:        reqData.Header,
 		ContentLength: reqData.ContentLength,
 		Body:          reqData.Body,
